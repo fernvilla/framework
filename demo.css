@@ -1,0 +1,6 @@
+.demo-grid [class^=column-] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+}

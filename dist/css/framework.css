@@ -353,4 +353,116 @@ td,
 th {
   padding: 0; }
 
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.row {
+  margin-left: -20px;
+  margin-right: -20px; }
+
+.column-1 {
+  width: 8.33333%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-2 {
+  width: 16.66667%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-3 {
+  width: 25%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-4 {
+  width: 33.33333%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-5 {
+  width: 41.66667%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-6 {
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-7 {
+  width: 58.33333%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-8 {
+  width: 66.66667%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-9 {
+  width: 75%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-10 {
+  width: 83.33333%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-11 {
+  width: 91.66667%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
+.column-12 {
+  width: 100%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 1px; }
+
 /*# sourceMappingURL=framework.css.map */
