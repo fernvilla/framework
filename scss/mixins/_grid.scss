@@ -21,3 +21,12 @@
   padding-right: $grid-gutter/ 2;
   min-height: 1px;
 }
+
+@mixin make-grid-columns {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: 100% / $grid-columns * $i;
+      @include make-column();
+    }
+  }
+}
