@@ -1,0 +1,14 @@
+.container {
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: 100% / $grid-columns * $i;
+    @include make-column();
+  }
+}
