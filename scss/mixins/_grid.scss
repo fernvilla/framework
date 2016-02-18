@@ -14,19 +14,45 @@
   @include clearfix();
 }
 
-@mixin make-column($gutter: $grid-gutter) {
-  position: relative;
-  float: left;
-  padding-left: $grid-gutter/ 2;
-  padding-right: $grid-gutter/ 2;
-  min-height: 1px;
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
 }
 
-@mixin make-grid-columns {
-  @for $i from 1 through $grid-columns {
-    .col-#{$i} {
-      width: 100% / $grid-columns * $i;
-      @include make-column();
+@mixin media-breakpoint($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter, $breakpoints: $grid-breakpoints) {
+  %grid-column {
+    position: relative;
+    padding-left: $gutter/ 2;
+    padding-right: $gutter/ 2;
+    min-height: 1px;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
+    @include media-breakpoint($breakpoint) {
+      @for $i from 1 through $columns {
+        .col-#{$breakpoint}-#{$i} {
+          float: left;
+          width: 100% / $grid-columns * $i;
+        }
+      }
     }
   }
 }
