@@ -1,0 +1,4 @@
+@mixin color-opacity($color, $opacity) {
+  color: $color;
+  color: rgba($color, $opacity);
+}

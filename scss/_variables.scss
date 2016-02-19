@@ -1,9 +1,52 @@
-// Grid system
-$grid-columns: 12;
-$grid-gutter: 20px;
+// Global Variables
+
+// Colors
+$color-white: #FFFFFF !default;
+$color-black: #000000 !default;
+$color-blue: #0096FF !default;
+$color-red: #DF0000 !default;
+$color-gray-lightest: #F6F6F6 !default;
+$color-gray-light: #CCCCCC !default;
+$color-gray-medium: #666666 !default;
+$color-gray-dark: #333333 !default;
+$color-gold: #FFBF58 !default;
+$color-green: #00BA00 !default;
+
+// Grid System
+$grid-columns: 12 !default;
+$grid-gutter: 20px !default;
 $grid-breakpoints: (
   xs: 0,
   sm: 768px,
   md: 992px,
   lg: 1200px
-);
+) !default;
+
+// Fonts
+$font-family: 'Open Sans', sans-serif !default; //'//fonts.googleapis.com/css?family=Open+Sans:700,400'
+$font-size: 14px !default;
+$font-size-small: 10px !default;
+$font-size-medium: 20px !default;
+$font-size-large: 30px !default;
+$font-size-xlarge: 50px !default;
+$font-weight: 400 !default;
+$font-weight-bold: 700 !default;
+$line-height: 1.714285 !default;
+
+// Containers
+$box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .05) !default;
+$navbar-height: 80px !default;
+$footer-height: 200px !default;
+$footer-height-mobile: 375px !default;
+
+// Buttons
+$button-height: 50px !default;
+
+// Hover Effects
+$transition: 0.5s ease !default;
+$transition-color: color $transition !default;
+$transition-opacity: opacity $transition !default;
+$opacity: .8 !default;
+
+// Links
+$link-color: $color-blue !default;
