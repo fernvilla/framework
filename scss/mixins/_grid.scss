@@ -14,14 +14,10 @@
   @include clearfix();
 }
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
 
-@mixin media-breakpoint($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
+  @if ($min != 0) {
     @media (min-width: $min) {
       @content;
     }
@@ -46,11 +42,15 @@
       }
     }
 
-    @include media-breakpoint($breakpoint) {
+    @include media-breakpoint-min($breakpoint) {
+      %grid-column-float-#{$breakpoint} {
+        float: left;
+      }
+
       @for $i from 1 through $columns {
         .col-#{$breakpoint}-#{$i} {
-          float: left;
-          width: 100% / $grid-columns * $i;
+          @extend %grid-column-float-#{$breakpoint};
+          width: 100% / $columns * $i;
         }
       }
     }
