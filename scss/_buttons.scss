@@ -70,4 +70,9 @@
       @include color-opacity($link-color, $opacity);
     }
   }
+
+  &.btn-full {
+    display: block;
+    width: 100%;
+  }
 }

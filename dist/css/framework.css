@@ -557,6 +557,9 @@ html {
     .btn.btn-link:hover {
       color: #0096FF;
       color: rgba(0, 150, 255, 0.8); }
+  .btn.btn-full {
+    display: block;
+    width: 100%; }
 
 a {
   text-decoration: none;
