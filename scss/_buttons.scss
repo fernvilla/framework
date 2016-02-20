@@ -1,0 +1,73 @@
+.btn {
+  display: inline-block;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  height: $button-height;
+  padding: $button-padding;
+  color: $color-white;
+  border: $button-border;
+  vertical-align: middle;
+
+  &:hover {
+    transition: $transition-all;
+    color: $color-white;
+  }
+
+  &.disabled {
+    opacity: $opacity;
+    cursor: $cursor-disabled;
+
+    &:hover {
+      opacity: 1 !important;
+      transition: none;
+    }
+  }
+
+  &.btn-primary {
+    background-color: #0096FF;
+
+    &:hover {
+      @include background-color-opacity($color-blue, $opacity);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-gray-medium;
+
+    &:hover {
+      @include background-color-opacity($color-gray-medium, $opacity);
+    }
+  }
+
+  &.btn-warning {
+    background-color: $color-red;
+
+    &:hover {
+      @include background-color-opacity($color-red, $opacity);
+    }
+  }
+
+  &.btn-inversed {
+    background-color: transparent;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+
+    &:hover {
+      @include color-opacity($color-blue, $opacity);
+    }
+  }
+
+  &.btn-link {
+    background-color: transparent;
+    border: none;
+    color: $link-color;
+
+    &:hover {
+      @include color-opacity($link-color, $opacity);
+    }
+  }
+}

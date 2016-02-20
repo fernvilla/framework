@@ -41,12 +41,17 @@ $footer-height-mobile: 375px !default;
 
 // Buttons
 $button-height: 50px !default;
+$button-padding: 11px 10px !default;
+$button-border: 1px solid transparent !default;
 
 // Hover Effects
-$transition: 0.5s ease !default;
-$transition-color: color $transition !default;
-$transition-opacity: opacity $transition !default;
+$transition-effect: 0.5s ease !default;
+$transition-all: all $transition-effect !default;
 $opacity: .8 !default;
 
 // Links
 $link-color: $color-blue !default;
+$link-text-decoration: none !default;
+
+// Cursor
+$cursor-disabled: not-allowed !default;

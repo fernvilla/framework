@@ -1,0 +1,10 @@
+a {
+  text-decoration: $link-text-decoration;
+  color: $link-color;
+  word-wrap: break-word;
+
+  &:hover {
+    @include color-opacity($link-color, $opacity);
+    transition: $transition-all;
+  }
+}
