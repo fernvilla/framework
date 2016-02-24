@@ -28,7 +28,7 @@
   }
 
   &.btn-primary {
-    background-color: #0096FF;
+    background-color: $button-primary;
 
     &:hover {
       @include background-color-opacity($color-blue, $opacity);
@@ -36,7 +36,7 @@
   }
 
   &.btn-secondary {
-    background-color: $color-gray-medium;
+    background-color: $button-secondary;
 
     &:hover {
       @include background-color-opacity($color-gray-medium, $opacity);
@@ -44,16 +44,24 @@
   }
 
   &.btn-warning {
-    background-color: $color-red;
+    background-color: $button-warning;
 
     &:hover {
       @include background-color-opacity($color-red, $opacity);
     }
   }
 
+  &.btn-success {
+    background-color: $button-success;
+
+    &:hover {
+      @include background-color-opacity($color-green, $opacity);
+    }
+  }
+
   &.btn-inversed {
-    background-color: transparent;
-    border: 1px solid $color-blue;
+    background-color: $button-inversed;
+    border: $button-border-solid;
     color: $color-blue;
 
     &:hover {
@@ -62,7 +70,7 @@
   }
 
   &.btn-link {
-    background-color: transparent;
+    background-color: $button-link;
     border: none;
     color: $link-color;
 

@@ -19,7 +19,8 @@ $grid-breakpoints: (
   xs: 0,
   sm: 768px,
   md: 992px,
-  lg: 1200px
+  lg: 1200px,
+  xl: 1600px
 ) !default;
 
 // Fonts
@@ -43,6 +44,13 @@ $footer-height-mobile: 375px !default;
 $button-height: 50px !default;
 $button-padding: 11px 10px !default;
 $button-border: 1px solid transparent !default;
+$button-border-solid: 1px solid $color-blue !default;
+$button-primary: $color-blue !default;
+$button-secondary: $color-gray-medium !default;
+$button-warning: $color-red !default;
+$button-success: $color-green !default;
+$button-inversed: transparent !default;
+$button-link: transparent !default;
 
 // Hover Effects
 $transition-effect: 0.5s ease !default;
